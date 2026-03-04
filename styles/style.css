@@ -19,10 +19,6 @@
   align-items: stretch;
 }
 
-.pictures {
-  padding-bottom: 0;
-}
-
 .header__rec {
   color: var(--accent-color);
   display: flex;
