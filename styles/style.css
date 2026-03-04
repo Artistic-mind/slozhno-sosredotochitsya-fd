@@ -31,23 +31,24 @@
   height: 26px;
   font-family: var(--main-font-family);
   font-size: var(--main-text-size);
+  text-transform: uppercase;
   font-weight: 400;
   justify-self: flex-end;
   align-self: start;
   right: 19px;
-  top: 10px;
+  top: 12px;
 }
 
 .header__rec::before {
   position: absolute;
   content: "";
   left: 2.5em;
-  top: 0.6em;
-  width: 4px;
-  height: 4px;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  box-shadow: 0px 0px 3px 4px var(--accent-color);
+  box-shadow: 0px 0px 5px 5px var(--accent-color);
 }
 
 .header__theme-menu {
@@ -301,7 +302,7 @@
 
   .header__rec {
     right: 29px;
-    top: 20px;
+    top: 22px;
   }
 
   .header {
