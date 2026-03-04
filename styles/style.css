@@ -96,7 +96,7 @@
   
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
     outline: none;
     border-bottom: 1px solid var(--nav-color);
    
@@ -276,7 +276,7 @@
   text-decoration: underline;
 }
 
-.link:focus {
+.link:focus-visible {
   outline: solid 1px var(--link-color);
   outline-offset: 2px;
 }
