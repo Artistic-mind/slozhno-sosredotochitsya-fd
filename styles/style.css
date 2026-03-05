@@ -1,7 +1,9 @@
 .page {
+  display: grid;
+  max-width: 100vw;
   background-color: var(--main-bg-color);
   background-image: var(--bg-image);
-  inline-size: 100vw;
+  justify-content: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +14,7 @@
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   position: relative;
-  inline-size: 100vw;
+  max-width: 100vw;
   padding: 10px;
   block-size: 100vh;
   min-block-size: 668px;
@@ -64,7 +66,7 @@
   background-color: transparent;
   border: none;
   width: 70px;
-  height: 26px;
+  max-height: 26px;
 }
 
 .header__theme-menu-button {
@@ -101,8 +103,9 @@
 
 .decorated-zone {
   position: relative;
+  max-width: 100vw;
+  padding: 10px;
   block-size: 100vh;
-  inline-size: 100vw;
 }
 
 .decorated-zone::before,
@@ -132,8 +135,8 @@
 .main-title {
   display: flex;
   font-family: var(--main-font-family);
-  color: var(--header-logo-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--logo-color);
+  font-size: var(--logo-size);
   font-weight: 700;
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--shadow-color);
@@ -160,7 +163,8 @@
 
 .content {
   display: grid;
-  inline-size: 100vw;
+  justify-content: center;
+  max-width: 100vw;
   gap: 49px;
   padding: 10px;
   margin-top: 30px;
@@ -212,11 +216,7 @@
 }
 
 .text-block__subtitle {
-  background-color: var(--subtitle-color);
-  color: var(--main-heading-color);
   font-weight: 400;
-  font-size: 18px;
-  inline-size: inherit;
 }
 
 .text-block__content {
@@ -252,6 +252,7 @@
 
 .footer {
   display: flex;
+  max-width: 100vw;
   min-block-size: 668px;
   align-items: center;
   justify-content: center;
@@ -270,7 +271,7 @@
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: solid 1px var(--link-color);
 }
 
 .link:focus-visible {
@@ -284,6 +285,10 @@
     padding: 20px;
     gap: 79px;
     margin-bottom: 40px;
+  }
+
+  .decorated-zone {
+    padding: 20px;
   }
 
   .decorated-zone::before {
@@ -333,8 +338,8 @@
     gap: 17px;
   }
 
-  .footer {
-    padding-left: 15px;
+  .footer .main-title{
+    padding-left: 20px;
   }
 
   .content-section__title {
@@ -389,7 +394,11 @@
 @media (width >= 1024px) {
   .header__theme-menu {
     justify-self: center;
-    height: 75.5%;
+    align-self: flex-start;
+  }
+
+  .decorated-zone {
+    padding: 20px;
   }
 
   .title-decor {
